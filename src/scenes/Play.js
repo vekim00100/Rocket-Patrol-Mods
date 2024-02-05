@@ -89,6 +89,10 @@ class Play extends Phaser.Scene {
             this.scene.start("menuScene")
         }
 
+        if(this.gameOver && Phaser.Input.Keyboard.JustDown(keyRESET)) {
+            this.scene.start("playScene")
+        }
+
         this.starfield.tilePositionX -= 4
     
         if(!this.gameOver) {
